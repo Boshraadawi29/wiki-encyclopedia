@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+    <form action="{% url 'randompage' %}" method= "post">
+    {% csrf_token %}
+    <div class="col-lg-8 col-md-10 col-sm-12 pt-5 pb-5 px-5">
+    <div class="form_goup">
+    	{{form.as_ul}}
+    </div> <br>
+    
+    <input type="submit" class="btn btn-outline-primary btn-lg" value="Save">
+    </div>
+{% endblock %}

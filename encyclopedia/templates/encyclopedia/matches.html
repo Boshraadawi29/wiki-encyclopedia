@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block body %}
+        <br><br>
+	<h2> The query you search for is not excist, do you mean: </h2>
+	<ul>
+	    {% for match in matches %}
+	        <li> <a href="/wiki/{{match}}">{{match}} </a></li>
+	    {% endfor %}
+	</ul>
+	<br>
+	<h5> If this is not what you are lookin for, you may want to create <a href="{% url 'createnewpage' %}">new page </a></h5>
+
+{% endblock %}

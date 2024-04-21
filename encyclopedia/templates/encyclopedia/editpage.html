@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html"%}
+
+
+{% block body%}
+	<div class="col-lg-8 col-md-10 col-sm-12 pt-5 pb-5 px-5">
+	<div class="form_goup">
+	<form method="post">
+    		{% csrf_token %}
+    		
+    		<textarea name="new_content" style="width: 600px; height: 350px;">{{ content }}</textarea>
+    		<br><br>
+    		<button type="submit" class="btn btn-outline-primary btn-lg">Save</button>
+	</form>
+	</div>
+	</div>
+{% endblock%}
+
+
